@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity() {
                     binding.productRcv.isVisible = true
                     val productList = product.payload?.products ?: emptyList()
                     adapter.submitListCategory(productList)
-                    Log.d(TAG, "setupRecycleView: $productList")
                 },
                 doOnError = {
                     Toast.makeText(this, "Data Not Found", Toast.LENGTH_SHORT).show()
@@ -67,5 +66,5 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private val TAG = "MainActivity"
+
 }
